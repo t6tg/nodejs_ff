@@ -1,11 +1,27 @@
 {
-  "name": "basic-nodejs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "type": "module",
-  "dependencies": {
-    "esm": "^3.2.25",
-    "express": "^4.17.1"
-  }
+    "name": "basic-nodejs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/node": "^7.13.10",
+        "@babel/preset-env": "^7.13.10",
+        "babel": "^6.23.0",
+        "body-parser": "^1.19.0",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "node-fetch": "^2.6.1",
+        "swagger-ui-express": "^4.1.6"
+    },
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "scripts": {
+        "dev": "nodemon — exec babel-node index.js"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
 }

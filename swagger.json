@@ -1,0 +1,50 @@
+{
+    "swagger": "2.0",
+    "title": "basic-express",
+    "version": "1.0.0",
+    "description": "basic express for friend",
+    "host": "localhost:8080",
+    "basePath": "/api/v1/",
+    "tags": [
+        {
+            "name": "users"
+        }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/users/login": {
+            "post": {
+                "tags": ["users"],
+                "description": "login api",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "json",
+                        "description": "username for login",
+                        "requires": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "json",
+                        "description": "password for login",
+                        "requires": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/components/schemas/login"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
